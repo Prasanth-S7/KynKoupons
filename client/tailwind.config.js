@@ -12,6 +12,9 @@ export default {
 			fontFamily: {
 				satoshi: ["satoshi", "sans-serif"]
 			},
+			fontFamily: {
+				nippo: ["nippo", "sans"]
+			},
 			colors: {
 				'teal': {
 					'50': '#f0fdfa',

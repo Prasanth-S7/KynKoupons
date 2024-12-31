@@ -1,7 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
+  .nippo {
+    font-family: 'nippo', sans;
+    font-weight: 'normal';
+  }
+  .satoshi {
+    font-family: 'satoshi', sans-serif;
+    font-weight: 'normal';
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -27,8 +37,7 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem
-  ;
+    --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -36,7 +45,10 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%}
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Define dark mode styles */
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -61,8 +73,7 @@
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%
-  ;
+    --chart-5: 340 75% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -70,24 +81,27 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%}
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
 }
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
-    @apply font-satoshi;
+    @apply satoshi; 
   }
+
+  @font-face {
+    font-family: 'nippo';
+    src: url('./assets/fonts/nippo.ttf') format('truetype');
+  }
+
   @font-face {
     font-family: 'satoshi';
     src: url('./assets/fonts/satoshi.ttf') format('truetype');
-  }  
+  }
 }
-
-/* @font-face {
-  font-family: 'Notosans';
-  src: url('./assets/fonts/Notosans.ttf');
-} */
-

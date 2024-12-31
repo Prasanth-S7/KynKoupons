@@ -30,7 +30,7 @@ export function NavMain({
         </div>
         <SidebarGroupLabel className="truncate text-white text-md">Home</SidebarGroupLabel>
       </div>
-      <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer " onClick={() => navigate("/insights")}>
+      {/* <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer " onClick={() => navigate("/insights")}>
         <div className="col-span-2">
           <Search></Search>
         </div>
@@ -41,7 +41,7 @@ export function NavMain({
           <FileText></FileText>
         </div>
         <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Reports</SidebarGroupLabel>
-      </div>
+      </div> */}
       <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer" onClick={() => navigate("/create-coupon")}>
         <div className="col-span-2">
           <Ticket></Ticket>

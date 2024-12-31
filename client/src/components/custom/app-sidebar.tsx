@@ -1,11 +1,7 @@
-"use client"
-
 import * as React from "react"
 import {
-  AudioWaveform,
   BookOpen,
   Bot,
-  Command,
   Frame,
   GalleryVerticalEnd,
   Map,
@@ -31,7 +27,7 @@ const data = {
   user: {
     name: "username",
     email: "username@example.com",
-    avatar: "/avatars/shadcn.jpg",
+    avatar: "https://kynhood.com/illustrations/logo.png",
   },
   teams: [
     {

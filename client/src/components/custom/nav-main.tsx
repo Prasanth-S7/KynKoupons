@@ -1,12 +1,7 @@
 "use client";
 
 import { ChevronRight, type LucideIcon } from "lucide-react";
-
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import React from "react";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -17,9 +12,8 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
-import { AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Avatar } from "../ui/avatar";
-import { Button } from "../ui/button";
+import { House, Ticket, Search, FileText } from "lucide-react";
+import {useNavigate} from "react-router-dom" 
 
 export function NavMain({
   items,
@@ -35,80 +29,34 @@ export function NavMain({
     }[];
   }[];
 }) {
-  const users = [
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-    {
-      username: "Prasanth",
-    },
-  ];
+
+  const navigate = useNavigate();
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Follow your KYNs</SidebarGroupLabel>
-      {users?.map((user: any, idx: any) => (
-        <div className="flex justify-evenly items-center mb-4">
-          <span>
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-          </span>
-          <span>{user.username}</span>
-          <Button>Follow</Button>
+      <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer" onClick={() => navigate("/")}>
+        <div>
+          <House></House>
         </div>
-      ))}
-      {/* <SidebarMenu>
-        {items.map((item) => (
-          <Collapsible
-            key={item.title}
-            asChild
-            defaultOpen={item.isActive}
-            className="group/collapsible"
-          >
-            <SidebarMenuItem>
-              <CollapsibleTrigger asChild>
-                <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon />}
-                  <span>{item.title}</span>
-                  <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
-                </SidebarMenuButton>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <SidebarMenuSub>
-                  {item.items?.map((subItem) => (
-                    <SidebarMenuSubItem key={subItem.title}>
-                      <SidebarMenuSubButton asChild>
-                        <a href={subItem.url}>
-                          <span>{subItem.title}</span>
-                        </a>
-                      </SidebarMenuSubButton>
-                    </SidebarMenuSubItem>
-                  ))}
-                </SidebarMenuSub>
-              </CollapsibleContent>
-            </SidebarMenuItem>
-          </Collapsible>
-        ))}
-      </SidebarMenu> */}
+        <SidebarGroupLabel className="truncate text-white text-md">Home</SidebarGroupLabel>
+      </div>
+      <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer " onClick={() => navigate("/insights")}>
+        <div className="col-span-2">
+          <Search></Search>
+        </div>
+        <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Insights</SidebarGroupLabel>
+      </div>
+      <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer" onClick={() => navigate("/reports")}>
+        <div className="col-span-2">
+          <FileText></FileText>
+        </div>
+        <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Reports</SidebarGroupLabel>
+      </div>
+      <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer" onClick={() => navigate("/create-coupon")}>
+        <div className="col-span-2">
+          <Ticket></Ticket>
+        </div>
+        <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Create Coupon</SidebarGroupLabel>
+      </div>
     </SidebarGroup>
   );
 }

@@ -54,6 +54,8 @@ export function CouponDialog() {
     offerValue: '',
     criteriaType: '',
     criteriaValue: '',
+    validTillForUser: '',
+    validTill: '',
   });
 
   const couponTypes = ['Internal', 'External'];
@@ -77,9 +79,14 @@ export function CouponDialog() {
 
   const handleSubmit = async(e: React.FormEvent) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3205/coupons/addCoupon", couponData)
+    const formattedData = {
+      ...couponData,
+      validTillForUser: couponData.validTillForUser ? new Date(couponData.validTillForUser).toISOString().split('T')[0] : '',
+      validTill: couponData.validTill ? new Date(couponData.validTill).toISOString().split('T')[0] : '',
+    };
+    const res = await axios.post("http://localhost:3205/coupons/addCoupon", formattedData);
     console.log(res.status);
-    console.log('Coupon data submitted:', couponData);
+    console.log('Coupon data submitted:', formattedData);
   };
 
   return (
@@ -219,6 +226,32 @@ export function CouponDialog() {
               className="col-span-3 bg-inherit border-white/10"
             />
           </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="validTillForUser" className="text-right">
+              Valid Till
+            </Label>
+            <Input
+              id="validTillForUser"
+              name="validTillForUser"
+              type="date"
+              value={couponData.validTillForUser}
+              onChange={handleInputChange}
+              className="col-span-3 bg-inherit border-white/10 text-white"
+            />
+          </div>
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="validTill" className="text-right">
+              Valid For User
+            </Label>
+            <Input
+              id="validTill"
+              name="validTill"
+              type="date"
+              value={couponData.validTill}
+              onChange={handleInputChange}
+              className="col-span-3 bg-inherit border-white/10 text-white"
+            />
+          </div>
         </form>
         <DialogFooter>
           <Button type="submit" onClick={handleSubmit}>Create Coupon</Button>
@@ -227,4 +260,3 @@ export function CouponDialog() {
     </Dialog>
   );
 }
-

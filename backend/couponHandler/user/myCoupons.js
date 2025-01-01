@@ -1,8 +1,11 @@
 const { fetchone } = require("../../db/basicCRUD/showoneormany");
+const { db } = require("../../db/connection");
 
 const getCouponsOfUser = async(req,res) => { 
   try {
-    const result = await fetchone("individualCoupons","userId",req.body["userId"],"==");
+    const {userId} = req.body;
+    const useRef = db.collection("user").doc(userId);
+    const result = await fetchone("individualCoupons","userId",useRef,"==");
     res.status(200).json(result);
   } catch (error) {
     console.error("Error fetching data:", error);

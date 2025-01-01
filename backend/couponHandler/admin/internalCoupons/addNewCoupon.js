@@ -23,7 +23,7 @@ const addCoupon = async(req,res) => {
                             totalCoupons: total,
                             },"allCoupons");
                             console.log(result)
-        if(result[msg]!="success"){
+        if(result["msg"]!="success"){
             res.status(400).json(result);
         }
         else{

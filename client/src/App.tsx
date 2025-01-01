@@ -12,14 +12,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-      <Route path='/' element={ <Dashboard MainComponent={DashboardComponent} /> }></Route>
-        <Route path='/insights' element={ <Dashboard MainComponent={<DashboardComponent />} /> }></Route>
-        <Route path='/reports' element={ <Dashboard MainComponent={<DashboardComponent />} /> }></Route>
-        <Route path='/create-coupon' element={ <Dashboard MainComponent={CouponsComponent} /> }></Route>
-        <Route path='/achievements' element={ <Dashboard MainComponent={AchievementsComponent} /> }></Route>
-        <Route path='/titles' element={ <Dashboard MainComponent={TitlesComponent} /> }></Route>
-        <Route path='/levels' element={ <Dashboard MainComponent={LevelsComponent} /> }></Route>
-        <Route path='/leaderboard' element={ <Dashboard MainComponent={LeaderboardComponent} /> }></Route>
+        <Route path='/' element={<Dashboard MainComponent={DashboardComponent} />}></Route>
+        <Route path='/insights' element={<Dashboard MainComponent={<DashboardComponent />} />}></Route>
+        <Route path='/reports' element={<Dashboard MainComponent={<DashboardComponent />} />}></Route>
+        <Route path='/create-coupon' element={<Dashboard MainComponent={CouponsComponent} />}></Route>
+        <Route path='/achievements' element={<Dashboard MainComponent={AchievementsComponent} />}></Route>
+        <Route path='/titles' element={<Dashboard MainComponent={TitlesComponent} />}></Route>
+        <Route path='/levels' element={<Dashboard MainComponent={LevelsComponent} />}></Route>
+        <Route path='/leaderboard' element={<Dashboard MainComponent={LeaderboardComponent} />}></Route>
       </Routes>
     </BrowserRouter>
   )

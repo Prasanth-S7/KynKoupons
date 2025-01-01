@@ -43,12 +43,12 @@ export function NavMain({
         </div>
         <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Reports</SidebarGroupLabel>
       </div> */}
-      {/* <div className={`flex space-x-3 rounded-xl py-2 items-center pl-3 mb-5 cursor-pointer ${location.pathname === "/create-coupon" ? "bg-white/10 text-black" : ""}`} onClick={() => navigate("/create-coupon")}>
+      <div className={`flex space-x-3 rounded-xl py-2 items-center pl-3 mb-2 cursor-pointer ${location.pathname === "/create-coupon" ? "bg-white/10 text-black" : ""}`} onClick={() => navigate("/create-coupon")}>
         <div className="col-span-2">
           <Ticket></Ticket>
         </div>
-        <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Create Coupon</SidebarGroupLabel>
-      </div> */}
+        <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Coupons</SidebarGroupLabel>
+      </div>
       <div className={`flex space-x-3 rounded-xl py-2 items-center pl-3 mb-2 cursor-pointer ${location.pathname === "/achievements" ? "bg-white/10 text-black" : ""}`} onClick={() => navigate("/achievements")}>
         <div className="col-span-2">
           <Trophy></Trophy>

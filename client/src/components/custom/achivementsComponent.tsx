@@ -76,7 +76,7 @@ export function AchievementCard({ title, description, image }: AchievementCardPr
     return (
         <div className="w-full h-64 p-4 border border-white/20 rounded-2xl bg-[#101010]">
             <div className="flex flex-col items-center justify-center h-full">
-                <div className="text-center">
+                <div className="text-center flex flex-col items-center justify-center">
                     <img src={image} alt="trophy" width={150} />
                     <div className="text-xl font-semibold mb-2">{title}</div>
                     <div className="text-sm text-white/80">{description}</div>

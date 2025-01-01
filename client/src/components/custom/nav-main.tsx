@@ -3,7 +3,7 @@ import {
   SidebarGroup,
   SidebarGroupLabel,
 } from "@/components/ui/sidebar";
-import { House, Ticket, Search, FileText, Trophy } from "lucide-react";
+import { House, Ticket, Trophy, Award } from "lucide-react";
 import { useNavigate } from "react-router-dom"
 
 export function NavMain({
@@ -56,7 +56,7 @@ export function NavMain({
       </div>
       <div className="flex space-x-3 items-center pl-3 mb-5 cursor-pointer" onClick={() => navigate("/titles")}>
         <div className="col-span-2">
-          <Trophy></Trophy>
+          <Award></Award>
         </div>
         <SidebarGroupLabel className="col-span-6 truncate text-white text-md">Titles</SidebarGroupLabel>
       </div>

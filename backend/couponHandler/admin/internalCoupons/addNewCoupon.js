@@ -5,13 +5,9 @@ const {db , admin} = require("../../../db/connection");
 
 const addCoupon = async(req,res) => {
     try {
-        const {couponType , criteriaType , offerType , offerVal , criteriaVal , partnerName ,total , validTill , validTillForUser } = req.body;
-        const useRef1 = db.collection("criteria").doc(criteriaType);
-        if(partnerName!==""){
-        const useRef2 = db.collection("partners").doc(partnerName);}
-        else{
-            const useRef2 = ""
-        }
+        const {couponType , criteriaName , offerType , offerVal , criteriaVal , partnerName ,total , validTill , validTillForUser } = req.body;
+        const useRef1 = db.collection("criteria").doc(criteriaName);
+        const useRef2 = db.collection("partners").doc(partnerName);
         const result = await addOne({
                             couponType:couponType ,
                             criteriaType:useRef1 ,

@@ -1,21 +1,21 @@
-const { Firestore } = require("@google-cloud/firestore");
 const { addMany } = require("../../../db/basicCRUD/addmany");
 const { addOne } = require("../../../db/basicCRUD/addone");
+const {db , admin} = require("../../../db/connection");
 
-const db = new Firestore();
 
 const addCoupon = async(req,res) => {
     try {
-        const {couponType , criteriaName , offerType , offerVal , criteriaVal , partnerName ,total , validTill , validTillForUser , name} = req.body;
+        const {couponType , criteriaName , offerType , offerVal , criteriaVal , partnerName ,total , validTill , validTillForUser } = req.body;
+        const useRef1 = db.collection("criteria").doc(criteriaName);
+        const useRef2 = db.collection("partners").doc(partnerName);
         const result = await addOne({
                             couponType:couponType ,
-                            criteriaType:`/criteria/${criteriaName}` ,
+                            criteriaType:useRef1 ,
                             criteriaVal: criteriaVal,
                             offerType: offerType,
                             offerVal: offerVal,
-                            partnerInfo: partnerName,
+                            partnerInfo: useRef2,
                             totalCoupons: total,
-                            name: name
                             },"allCoupons");
         if(result[msg]!="success"){
             res.status(400).json(result);

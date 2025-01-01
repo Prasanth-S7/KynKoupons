@@ -5,8 +5,9 @@ const {db , admin} = require("../../../db/connection");
 
 const addCoupon = async(req,res) => {
     try {
-        const {couponType , criteriaName , offerType , offerVal , criteriaVal , partnerName ,total , validTill , validTillForUser } = req.body;
-        const useRef1 = db.collection("criteria").doc(criteriaName);
+        console.log(req.body);
+        const {couponType , criteriaType , offerType , offerVal , criteriaVal , partnerName ,total , validTill , validTillForUser } = req.body;
+        const useRef1 = db.collection("criteria").doc(criteriaType);
         const useRef2 = db.collection("partners").doc(partnerName);
         const result = await addOne({
                             couponType:couponType ,
@@ -23,7 +24,7 @@ const addCoupon = async(req,res) => {
         else{
             const pcid = result["id"];
             let data = [];
-            for(let i=0;i<total;i++){
+            for(let i=0;i<parseInt(total);i++){
                 data.push({"cid":pcid , "status":"active" , "uid" : "" , 
                     "validTill" : admin.firestore.Timestamp.fromDate(new Date(validTill)),
                     "validTillForUser" : admin.firestore.Timestamp.fromDate(new Date(validTillForUser))

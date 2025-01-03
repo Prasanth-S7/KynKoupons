@@ -1,3 +1,5 @@
+![Koupons](https://github.com/user-attachments/assets/664c86e0-c44f-4705-b10a-05d1d2c537e7)
+
 # Koupons: SaaS-Based Engagement and Rewards System  
 
 Koupons is a dynamic SaaS platform designed to enhance user engagement and retention for social media and similar platforms. It provides a highly configurable rewards mechanism and personalized notifications to incentivize and retain users effectively.  

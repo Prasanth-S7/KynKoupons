@@ -95,6 +95,40 @@ flutter run
 - Access the admin panel to define engagement rules and monitor user activities.  
 - Customize notifications and reward tiers as needed.  
 
+### Screenshots
+
+# Web App Screenshots
+
+## Screenshots Grid
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+
+  <!-- First Row -->
+  <div style="grid-column: span 1;">
+    <img src="./hosted-assets/home.png" alt="Screenshot 1" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+  </div>
+  <div style="grid-column: span 1;">
+    <img src="./hosted-assets/achievements.png" alt="Screenshot 2" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+  </div>
+
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px;">
+
+  <!-- Second Row -->
+  <div style="grid-column: span 1;">
+    <img src="./hosted-assets/levels.png" alt="Screenshot 3" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+  </div>
+  <div style="grid-column: span 1;">
+    <img src="./hosted-assets/titles.png" alt="Screenshot 4" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+  </div>
+  <div style="grid-column: span 1;">
+    <img src="./hosted-assets/leaderboard.png" alt="Screenshot 5" style="width: 100%; border: 1px solid #ddd; border-radius: 8px;">
+  </div>
+
+</div>
+
+
 ### For Users  
 - Interact with the demo app to earn and view rewards.  
 - Engage with platform features like posts, comments, and event bookings.  

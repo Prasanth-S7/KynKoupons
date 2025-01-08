@@ -60,7 +60,7 @@ export function LeaderboardComponent() {
             <div className="flex justify-center text-xl">
                 <div className="flex flex-col space-y-3">
                     <span className="text-green-600 text-2xl text-center">Leaderboard</span>
-                    <span className="text-base text-center text-white/50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod distinctio enim ab veniam ipsa quos harum, accusamus accusantium hic, ipsum iusto blanditiis totam voluptate quas amet ipsam illo rerum. Ex!</span>
+                    <span className="text-base text-center text-white/50">Top Users of the month</span>
                 </div>
             </div>
             <div className="flex items-center justify-center mt-20 mb-10">

@@ -109,27 +109,29 @@ flutter run
 
 # Screenshots
 
-<table>
+<table cellspacing="20" cellpadding="20">
 <tr>
-<td width="50%">
-<img src="./hosted-assets/home.png" alt="Home Screen">
+<td width="50%" align="center" style="padding: 20px;">
+<img src="./hosted-assets/home.png" alt="Home Screen" width="100%">
 </td>
-<td width="50%">
-<img src="./hosted-assets/achievements.png" alt="Achievements Screen">
+<td width="50%" align="center" style="padding: 20px;">
+<img src="./hosted-assets/achievements.png" alt="Achievements Screen" width="100%">
 </td>
 </tr>
 </table>
 
-<table>
+<br>
+
+<table cellspacing="20" cellpadding="20">
 <tr>
-<td width="33%">
-<img src="./hosted-assets/levels.png" alt="Levels Screen">
+<td width="33%" align="center" style="padding: 20px;">
+<img src="./hosted-assets/levels.png" alt="Levels Screen" width="100%">
 </td>
-<td width="33%">
-<img src="./hosted-assets/titles.png" alt="Titles Screen">
+<td width="33%" align="center" style="padding: 20px;">
+<img src="./hosted-assets/titles.png" alt="Titles Screen" width="100%">
 </td>
-<td width="33%">
-<img src="./hosted-assets/leaderboard.png" alt="Leaderboard Screen">
+<td width="33%" align="center" style="padding: 20px;">
+<img src="./hosted-assets/leaderboard.png" alt="Leaderboard Screen" width="100%">
 </td>
 </tr>
 </table>

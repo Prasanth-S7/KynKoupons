@@ -109,18 +109,30 @@ flutter run
 
 # Screenshots
 
-<div align="center">
-  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px;">
-    <img src="./hosted-assets/home.png" alt="Home Screen" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./hosted-assets/achievements.png" alt="Achievements Screen" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-  
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
-    <img src="./hosted-assets/levels.png" alt="Levels Screen" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./hosted-assets/titles.png" alt="Titles Screen" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-    <img src="./hosted-assets/leaderboard.png" alt="Leaderboard Screen" width="100%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  </div>
-</div>
+<table>
+<tr>
+<td width="50%">
+<img src="./hosted-assets/home.png" alt="Home Screen">
+</td>
+<td width="50%">
+<img src="./hosted-assets/achievements.png" alt="Achievements Screen">
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="33%">
+<img src="./hosted-assets/levels.png" alt="Levels Screen">
+</td>
+<td width="33%">
+<img src="./hosted-assets/titles.png" alt="Titles Screen">
+</td>
+<td width="33%">
+<img src="./hosted-assets/leaderboard.png" alt="Leaderboard Screen">
+</td>
+</tr>
+</table>
 
 ---
 
